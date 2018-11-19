@@ -10,8 +10,8 @@ class App extends Component {
 
       <>
         <Epic title="November's Bills">
-          <Task>Pay Rent</Task>
-          <Task>Pay Buliding Admin</Task>
+          <Task status='to do'>Pay Rent</Task>
+          <Task status='done'>Pay Buliding Admin</Task>
           <Task>Pay dad's Insurance</Task>
         </Epic>
 
