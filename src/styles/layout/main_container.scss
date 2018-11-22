@@ -1,10 +1,16 @@
 .__main-container { 
-  width: 100%;
-  max-width: 800px;
-  margin: 0px auto;
 
-  & .dark-theme {
-    background-color: black;
-    color: white;
+  width: 100%;
+
+  &.theme-dark {
+    background-color: #282c34;
+    color: #dadada;
+  }
+
+  &-inner {
+    margin: 0px auto;
+    max-width: 800px;
+    padding: 20px;
+    width: 100%;      
   }
 }
