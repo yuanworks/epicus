@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+/*import { bindActionCreators } from 'redux';*/
 import Task from './components/task';
 import Epic from './components/epic';
 import { MainContainer } from './components/layout/main_container';
+
+//import  * as ThemeActions from '../src/redux/actions/themeActions';
 
 class App extends Component {
   render() {
@@ -12,9 +16,23 @@ class App extends Component {
           <Task status='done'>Pay Buliding Admin</Task>
           <Task>Pay dad's Insurance</Task>
         </Epic>
-      </MainContainer>
+
+        <button onClick={() => this.props.setTheme()}>Dark mode</button>
+      </MainContainer>   
     );
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  /*
+  return bindActionCreators ({
+    themeActions: ThemeActions
+  }
+  */
+
+  return {
+    setTheme: () => dispatch({ type: 'THEME_SET', payload: {theme: 'dark'}}),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
