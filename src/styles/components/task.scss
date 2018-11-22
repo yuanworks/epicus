@@ -45,5 +45,17 @@
       padding: 0;
       margin: 0;
     }
+  } /* -- .status */
+} /* -- .task */
+
+.theme-dark {
+  .task {
+    .status {
+
+      &-selected {
+        background-color: #353535;
+        box-shadow: 1px 1px 0px #00000080;  
+      }
+    }
   }
 }
