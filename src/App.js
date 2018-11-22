@@ -6,7 +6,7 @@ import Epic from './components/epic';
 import { MainContainer } from './components/layout/main_container';
 
 //import  * as ThemeActions from '../src/redux/actions/themeActions';
-import * as ThemeSelectors from '../src/redux/selectors/themeSelectors';
+import * as SettingsSelectors from './redux/selectors/settingsSelector';
 
 class App extends Component {
   render() {
@@ -25,7 +25,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  const theme = ThemeSelectors.getTheme(state);
+  const theme = SettingsSelectors.getTheme(state);
   
   return { theme };
 }
