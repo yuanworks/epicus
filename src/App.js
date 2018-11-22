@@ -6,11 +6,12 @@ import Epic from './components/epic';
 import { MainContainer } from './components/layout/main_container';
 
 //import  * as ThemeActions from '../src/redux/actions/themeActions';
+import * as ThemeSelectors from '../src/redux/selectors/themeSelectors';
 
 class App extends Component {
   render() {
     return (
-      <MainContainer>
+      <MainContainer theme={this.props.theme}>
         <Epic title="November's Bills">
           <Task status='to do'>Pay Rent</Task>
           <Task status='done'>Pay Buliding Admin</Task>
@@ -21,6 +22,12 @@ class App extends Component {
       </MainContainer>   
     );
   }
+}
+
+const mapStateToProps = state => {
+  const theme = ThemeSelectors.getTheme(state);
+  
+  return { theme };
 }
 
 const mapDispatchToProps = dispatch => {
@@ -35,4 +42,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
