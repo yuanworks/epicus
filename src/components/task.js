@@ -6,6 +6,7 @@ const statusTypes = [
   'to do',
   'done',
   'cancelled',
+  'delete task'
 ];
 
 export default class Task extends Component {
@@ -14,7 +15,7 @@ export default class Task extends Component {
     return (
       <div className='task'>
         <div><input type="checkbox" /></div>
-        <div>{ this.props.children }</div>
+        <div className='title'>{ this.props.children }</div>
         { this.props.status && <Status options={statusTypes} selected={this.props.status} />}
       </div>
     );

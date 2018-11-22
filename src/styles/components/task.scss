@@ -2,9 +2,15 @@
   display: flex;
 
   border-bottom: 1px solid lightgray;
+  padding-bottom: 4px;
+  padding-top: 4px;
   
   &:first-of-type {
     border-top: 1px solid lightgray;
+  }
+
+  .title {
+    flex: 1
   }
 }
 
@@ -31,6 +37,8 @@
     border: 1px solid red;
     background-color: white;
     padding: 2px 4px;
+
+    z-index: 1000;
 
     ul {
       list-style: none;

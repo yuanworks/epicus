@@ -3,17 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 import Task from './components/task';
 import Epic from './components/epic';
+import { MainContainer } from './components/layout/main_container';
 
 class App extends Component {
   render() {
     return (
 
       <>
-        <Epic title="November's Bills">
-          <Task status='to do'>Pay Rent</Task>
-          <Task status='done'>Pay Buliding Admin</Task>
-          <Task>Pay dad's Insurance</Task>
-        </Epic>
+        <MainContainer>
+          <Epic title="November's Bills">
+            <Task status='to do'>Pay Rent</Task>
+            <Task status='done'>Pay Buliding Admin</Task>
+            <Task>Pay dad's Insurance</Task>
+          </Epic>
+        </MainContainer>
 
         <div className="App">
           <header className="App-header">
