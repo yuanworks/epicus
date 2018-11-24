@@ -1,12 +1,13 @@
+import SETTINGS from "../../constants/settings";
+
 const initialState = {
-  theme: 'light',
+  theme: SETTINGS.Themes.Default,
 };
 
 const settings = (state = initialState, action) => {
   
   switch (action.type) {
-    case 'THEME_SET':
-      console.log(action);
+    case SETTINGS.Actions.SetTheme:
       return {...state, theme: action.payload.theme};
 
     default:

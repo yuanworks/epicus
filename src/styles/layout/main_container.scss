@@ -3,6 +3,7 @@
   width: 100%;
   background-color: #ececec;
   min-height: 100vh;
+  transition: 0.5s all;
 
   &.theme-dark {
     background-color: #282c34;

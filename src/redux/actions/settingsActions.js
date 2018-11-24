@@ -1,4 +1,6 @@
+import SETTINGS from '../../constants/settings';
+
 export const setTheme = theme => ({
-  type: 'THEME_SET',
+  type: SETTINGS.Actions.SetTheme,
   payload: { theme },
 });
