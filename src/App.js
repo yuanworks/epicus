@@ -9,7 +9,7 @@ import  * as SettingsActions from '../src/redux/actions/settingsActions';
 import * as SettingsSelectors from './redux/selectors/settingsSelector';
 import SETTINGS from './constants/settings';
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <MainContainer theme={this.props.theme}>
