@@ -1,6 +1,6 @@
 {
   "name": "epicus",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
