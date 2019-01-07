@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 import rootReducer from './reducers';
-import Immutable from 'immutable';
+import Immutable, { Map } from 'immutable';
 
 // if this fails, it should fall back to resetting the store instead of failing: (try setting the store to undefined)
 const persistedState = localStorage.getItem('StoreState') ? Immutable.fromJS(JSON.parse(localStorage.getItem('StoreState'))) : Map();
